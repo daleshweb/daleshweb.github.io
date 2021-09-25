@@ -1,0 +1,417 @@
+:root{
+    /* Fonts */
+    --main-font-family: 'Roboto', sans-serif;
+    /* Other Settings */
+    --border-radius: 50px;
+    --letter-spacing: 2px;
+    --padding-section: 5rem;
+}
+
+html,
+body,
+a{
+    font-family: var(--main-font-family);
+}
+
+
+/* Header */
+
+.header__top {
+  background-image: url("../img/top-3200.svg"),url("../img/overlay1.png"),url("../img/headeri.jpg");
+  background-position: bottom center,top left,center;
+  background-repeat: repeat-x,repeat,no-repeat;
+  background-size: 3200px 460px,auto,cover !important;
+  color: rgba(255,255,255,0.9);
+  padding: 5em 0 15em 0;
+  position: relative;
+  text-align: center;
+  height: 100%;
+}
+    @media screen and (max-width:768px){
+        .header__top {
+		background-image: url("../img/top-1600.svg"), url("../img/overlay.png"), url("../img/headeri.jpg");
+		background-size: 1600px 230px,					auto,							cover;
+		padding: 5em 0 9em 0;
+        }
+    }
+
+    @media screen and (max-width:576px){
+        .header__top {
+        background-image: url("../img/top-1280.svg"), url("../img/overlay.png"), url("../img/headeri.jpg");
+        background-size: 1280px 184px,						auto,							cover;
+        padding: 3em 0 7em 0;
+        }
+    }
+
+.header__top h1{
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 72px;
+}
+
+.header__top p{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.header__top span{
+    color: orange;
+}
+
+
+/* Navbar */
+.navbar{
+    background-color: rgba(0, 0, 0, 0.966) !important;
+}
+.navbar a{
+    color: white !important;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 1rem;
+}
+.navbar :hover{
+    color: orange !important;
+}
+.navbar :active{
+    color: orange !important;
+}
+
+/* Remove border from toggler */
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: white;
+}
+
+
+/* Main */
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #3b434a;
+  position: relative;
+  z-index: 2;
+}
+.section-title span {
+  position: absolute;
+  top: 30px;
+  color: #eef0f2;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+.section-title p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 575px) {
+  .section-title h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .section-title span {
+    font-size: 38px;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# About Me
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #3b434a;
+  text-transform: uppercase;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.about .content ul strong {
+  margin-right: 10px;
+}
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #ffb727;
+  line-height: 0;
+}
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.about .image {
+  background: url("../img/fperfil.jpg") center center no-repeat;
+  min-height: 500px;
+}
+
+
+/* skills */
+
+#skills{
+  background-color: black;
+}
+#skills h2{
+  color: orange;
+}
+
+#skills p{
+  color: white;
+}
+
+#skills span{
+  color: rgb(32, 21, 0);
+}
+
+.bg-skills{
+    padding: 34px 15px 0;
+    margin-bottom: 40px;
+    height: 120px;
+    background-color: rgb(7, 7, 7);
+    border-radius: 10px;
+
+}
+  
+
+
+.bg-skills img{
+  width: 40px;
+}
+
+.bg-skills h3{
+  color: #fff;
+  font-size: 14px;
+}
+
+
+/*--------------------------------------------------------------
+# My Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #3b434a;
+}
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #82909c;
+  position: relative;
+}
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffb727;
+  margin-bottom: 10px;
+}
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #eef0f2;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #82909c;
+}
+
+
+/*footer*/
+
+footer {
+    background-attachment: scroll;
+    background-color: #050200;
+    background-image: url("../img/bottom-3200.svg");
+    background-position: top center;
+    background-repeat: repeat-x;
+    background-size: 3200px 460px;
+    color: rgba(255, 255, 255, 0.8);
+    /*
+    Since the SVG background occupies a lot of vertical space, we'll
+    add additional top padding (to move our content out of its way)
+    and a negative margin (to move everything up a bit).
+    */
+    margin-top: -260px;
+    padding: calc(460px + 6em) 0 10em 0;
+    position: relative;
+    text-align: center;
+}
+
+footer h2{
+    font-size: 3rem;
+    color: white;
+}
+
+footer h2 span{
+  font-size: 3rem;
+  color: orange;
+}
+
+
+/* Form */
+
+form.contacto input.form-control, form.contacto textarea.form-control {
+    background: none;
+		color: inherit;
+		font-weight: 600;
+
+	}
+
+
+/*Boton*/
+
+.btn-warning {
+	  font-size: 1.3em;
+    color: rgb(255, 255, 255);
+    background-color: orange;
+    border-color: orange;
+		height: 50px;
+		width: 200px;
+		text-transform: uppercase;
+		font-weight: 700;
+
+
+}
+
+
+/*iconos*/
+
+
+
+
+.icons  a {
+	font-size: 40px;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	margin: 1em 0;
+    text-align: center;
+    padding: 0 1em 0 0;
+}
+
+.icons  a:hover{
+    color: orange;
+}
+
+.copyrigth p {
+  font-weight: 100;
+  font-size: 1em;
+  color: #fff;
+  padding: 0;
+}
+
+
+/*mediquerys*/
